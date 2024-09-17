@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모달: 기관인증확인</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../modules/bootstrap-5.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/styles/common.css" />
+</head>
+
+<body>
+  <div id="root">
+
+    <div style="padding: 16px;">
+      <h4 style="margin: 16px 0 8px;">로그인</h4>
+      <div class="btn_area">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#orgSuccessModal">기관인증확인</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#findPasswordModal">비밀번호찾기</button>
+      </div>
+      <h4 style="margin: 16px 0 8px;">대시보드</h4>
+      <div class="btn_area">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logoutModal">로그아웃</button>
+      </div>
+      <h4 style="margin: 16px 0 8px;">사용자관리</h4>
+      <div class="btn_area">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#deleteUserListModal">목록삭제</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#editUserModal">수정완료</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#cancelFormModal">작성취소</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#completeAddUserModal">추가완료</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#incompleteFormModal">필수항목입력</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#addindexModal">기록추가</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#deleteRecordModal">편집삭제</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#saveEditRecordModal">편집저장</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#alertEditRecordModal">편집저장경고</button>
+      </div>
+      <h4 style="margin: 16px 0 8px;">클래스 관리</h4>
+      <div class="btn_area">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#deleteClassModal">클래스삭제</button>
+      </div>
+      <h4 style="margin: 16px 0 8px;">범용</h4>
+      <div class="btn_area">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal">삭제</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">등록</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">수정</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cancelModal">취소</button>
+      </div>
+    </div>
+
+    <!-- Modal : 기관인증확인 -->
+    <div class="modal fade" id="orgSuccessModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico success"></p>
+              <p class="text"><span class="text-primary">성남점</span> 기관 인증이 확인되었습니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 비밀번호찾기 -->
+    <div class="modal fade" id="findPasswordModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico help"></p>
+              <p>시설 관리자에게 문의하세요.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 로그아웃 -->
+    <div class="modal fade" id="logoutModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">로그아웃 하시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 목록삭제 -->
+    <div class="modal fade" id="deleteUserListModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">선택하신 회원 목록을<br /> 삭제 하시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 수정완료 -->
+    <div class="modal fade" id="editUserModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico success"></p>
+              <p class="text"><span class="text-primary">김스텝</span>의 회원정보가<br />변경되었습니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 작성취소 -->
+    <div class="modal fade" id="cancelFormModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">작성한 내용을 취소하고<br />이전 페이지로 돌아가시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 추가완료 -->
+    <div class="modal fade" id="completeAddUserModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico success"></p>
+              <p class="text"><span class="text-primary">김스텝</span>님이 새로 등록되었습니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 필수항목입력 -->
+    <div class="modal fade" id="incompleteFormModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico help"></p>
+              <p class="text">필수 입력 항목을 입력해주세요.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 기록추가 -->
+    <div class="modal fade" id="addindexModal" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="title">일상생활체력지수 기록 추가</h>
+          </div>
+          <div class="modal-body">
+            <div class="detail_index">
+              <table class="table edit">
+                <caption class="visually-hidden">테이블</caption>
+                <colgroup>
+                  <col style="width: 210px;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>일상체력지수</th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                    <th>
+                      <div class="d-flex">
+                        <input id="datepicker" class="form-control datepicker_input" type="text" placeholder="날짜선택" />
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>악력(kg)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>아령들기(회)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>눈뜨고외발서기(초)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>기능성뻗기(cm)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>유연성(cm)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>누웠다일어나기(초)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>30초간 의자에서<br /> 앉았다 일어나기(회)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>벽에서 버티기(초)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>콩옮기기(회)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>페그보드(회)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>3m 발붙여 걷기(회)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>5m 발붙여 걷기(회)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>8자보행(초)</th>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex">
+                        <input type="number" class="form-control" value="10" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 편집삭제 -->
+    <div class="modal fade" id="deleteRecordModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">해당 날짜의 데이터는<br /><span class="text-primary">모두 삭제</span>됩니다.<br />그래도 삭제하시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 편집저장 -->
+    <div class="modal fade" id="saveEditRecordModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">입력된 항목을 저장하시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 편집저장경고 -->
+    <div class="modal fade" id="alertEditRecordModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">저장하지 않은 내용은 모두 삭제됩니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 클래스삭제 -->
+    <div class="modal fade" id="deleteClassModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">선택하신 클래스 목록을<br />삭제 하시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 삭제 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">정말로 삭제하시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 등록 -->
+    <div class="modal fade" id="addModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico success"></p>
+              <p class="text">등록되었습니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 수정 -->
+    <div class="modal fade" id="editModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico success"></p>
+              <p class="text">수정되었습니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal : 취소 -->
+    <div class="modal fade" id="cancelModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico alert"></p>
+              <p class="text">작성중인 내역이 있습니다.<br />정말로 이전 화면으로 돌아가시겠습니까?</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScripts -->
+  <script src="../modules/jquery-3.5.1.min.js"></script>
+  <script src="../modules/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="../modules/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+  <script src="../modules/bootstrap-datepicker/bootstrap-datepicker.ko.min.js"></script>
+  <script src="../modules/jquery.metisMenu.js"></script>
+  <script src="../modules/jquery.scrollbar.js"></script>
+  <script src="../assets/scripts/common.js"></script>
+</body>
+
+</html>

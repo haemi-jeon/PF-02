@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>클래스상세-데이터없음</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../modules/bootstrap-5.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/styles/common.css" />
+</head>
+
+<body>
+  <div id="root">
+    <!-- TOP_BAR -->
+    <div class="top_bar">
+      <a href="01_대시보드_A.html" class="logo">
+        <img src="../assets/images/logo_top.svg" alt="Mostep Admin" />
+      </a>
+      <div class="top_main">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">HOME</li>
+          <li class="breadcrumb-item">클래스 관리</li>
+          <li class="breadcrumb-item active" aria-current="page">초보자를 위한 기초반</li>
+        </ol>
+        <h2 class="page_title">초보자를 위한 기초반</h2>
+        <ul class="top_menu">
+          <li class="account">
+            <div class="avatar">
+              <img src="../assets/images/img-avatar.png" class="avatar" alt="사용자 이미지" />
+            </div>
+            <div class="info">
+              <p class="name">김스텝</p>
+              <p class="sub">
+                <span class="position">트레이너</span>
+                <span class="organization">성남종합운동장</span>
+              </p>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="nav-link" data-bs-toggle="dropdown" role="button">
+              <img src="../assets/images/ico-more_dot.svg" class="avatar" alt="더보기" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-animated" tabindex="-1">
+              <a href="javascript:void(0);" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                <span class="ico logout"></span>
+                <span>로그아웃</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- SIDE_BAR -->
+    <div class="side_bar">
+      <ul id="metismenu" class="gnb">
+        <li>
+          <a href="01_대시보드_A.html">
+            <span class="ico dashboard"></span>
+            <span class="text">대시보드</span>
+          </a>
+        </li>
+        <li>
+          <a href="02-01_사용자관리_B_checked.html">
+            <span class="ico user"></span>
+            <span class="text">사용자 관리</span>
+          </a>
+        </li>
+        <li class="mm-active">
+          <a href="03-01_클래스관리_A.html">
+            <span class="ico class"></span>
+            <span class="text">클래스 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="04-01_공지사항관리_A.html">
+            <span class="ico notice"></span>
+            <span class="text">공지사항 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="05-01_트레이너관리.html">
+            <span class="ico trainer"></span>
+            <span class="text">트레이너 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="06-01_패턴그룹관리.html">
+            <span class="ico pattern"></span>
+            <span class="text">패턴 그룹 관리</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- CONTENTS -->
+    <main class="contents_wrapper">
+      <div class="jquery_scrollbar">
+        <div class="contents">
+          <div class="contents_header">
+            <div class="card summary_class">
+              <h3 class="name">초보자를 위한 기초반</h3>
+              <select id="" class="form-select">
+                <option>1회차</option>
+                <option>2회차</option>
+                <option>3회차</option>
+                <option>4회차</option>
+              </select>
+              <p class="session">
+                <span class="badge">회차 정보</span>
+                <span class="description">박수치기와 뒤로가기, 바로 일어나 보기, 넘어지지 않기</span>
+              </p>
+              <p class="time">
+                <span>월수금 10:30</span>
+                <span class="period">2022.10.01-2022.11.01</span>
+              </p>
+              <a href="03-03_클래스수정.html" class="btn btn-sm btn-outline-secondary">
+                <span class="ico edit"></span>
+                <span>수정</span>
+              </a>
+            </div>
+            <div class="card summary_trainer">
+              <div class="d-flex">
+                <h3 class="name">박운동</h3>
+                <span class="badge male">남</span>
+                <span class="position">담당 트레이너</span>
+              </div>
+              <span class="id">mostep123994u</span>
+              <span class="phone">010-8793-6772</span>
+            </div>
+            <div class="card summary_statistic">
+              <div class="summary">
+                <h3 class="title">
+                  <span>클래스 통계</span>
+                  <span class="helper_text">(2021.05.28 ~ 2022.08.28 기간 내의 결과입니다.)</span>
+                </h3>
+                <ul class="info_list">
+                  <li>
+                    <p class="name">총 운동 회차</p>
+                    <p class="count"><span class="num">0</span><span>회</span></p>
+                  </li>
+                  <li>
+                    <p class="name">평균 스탭 수</p>
+                    <p class="count"><span class="num">0</span><span>회</span></p>
+                  </li>
+                  <li>
+                    <p class="name">평균 정확도</p>
+                    <p class="count"><span class="num">0</span><span>%</span></p>
+                  </li>
+                  <li>
+                    <p class="name">평균 보속</p>
+                    <p class="count"><span class="num">0</span><span>초</span></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="contents_body">
+            <div class="card">
+              <div class="card_header">
+                <h3 class="title">
+                  <span>참여인원</span>
+                  <span class="helper_text">총 0명</span>
+                </h3>
+                <div class="contents_tool">
+                  <form class="search_bar">
+                    <input id="search" class="form-control" type="text" placeholder="사용자 이름이나 전화번호, 아이디를 입력해 검색하세요." />
+                    <button type="submit" class="btn btn-outline-primary">검색</button>
+                  </form>
+                </div>
+              </div>
+              <div class="card_body">
+                <table class="table none_data"> <!-- 데이터 없음 ? .none_data 추가 : 제거 -->
+                  <caption class="visually-hidden">테이블</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>이름</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>아이디</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>나이</span>
+                          <span class="ico ascending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>성별</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>연락처</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>운동등급</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>총 스텝수</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>정확도</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>최근 회차</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="d-flex">
+                          <span>참여 여부</span>
+                          <span class="ico descending"></span>
+                        </p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="10">
+                        <p>등록된 참여인원이 없습니다.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="card latest_session">
+                <div class="card_header">
+                  <h3 class="title">
+                    <span>최근 회차</span>
+                    <span class="helper_text">최근 5회차 수업이 표시됩니다.</span>
+                  </h3>
+                </div>
+                <div class="card_body">
+                  <div class="jquery_scrollbar">
+                    <div class="scroll_inner">
+                      <table class="table none_data"> <!-- 데이터 없음 ? .none_data 추가 : 제거 -->
+                        <caption class="visually-hidden">테이블</caption>
+                        <thead>
+                          <tr>
+                            <th scope="col">운동 날짜</th>
+                            <th scope="col">회차</th>
+                            <th scope="col">회차 상세</th>
+                            <th scope="col">난이도</th>
+                            <th scope="col">참여인원</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="5">
+                              <p>최근 회차 수업이 없습니다.</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card notice">
+                <div class="card_header">
+                  <h3 class="title">클래스 공지사항</h3>
+                  <ul class="pagination phase">
+                    <li class="prev"><a href="javascript:void(0)"></a></li>
+                    <li class="page"><span class="current_page">0</span>/<span class="total_page">0</span></li>
+                    <li class="next"><a href="javascript:void(0)"></a></li>
+                  </ul>
+                  <a href="03-03_클래스생성.html" class="btn btn-outline-secondary">
+                    <span class="ico edit"></span>
+                    <span>신규</span>
+                  </a>
+                </div>
+                <div class="card_body">
+                  <div class="jquery_scrollbar">
+                    <div class="scroll_inner">
+                      <ul class="notice_list none_data"> <!-- 데이터 없음 ? .none_data 추가 : 제거 -->
+                        <li>
+                          <p>클래스 공지사항이 없습니다.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScripts -->
+  <script src="../modules/jquery-3.5.1.min.js"></script>
+  <script src="../modules/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="../modules/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+  <script src="../modules/bootstrap-datepicker/bootstrap-datepicker.ko.min.js"></script>
+  <script src="../modules/jquery.metisMenu.js"></script>
+  <script src="../modules/jquery.scrollbar.js"></script>
+  <script src="../assets/scripts/common.js"></script>
+</body>
+
+</html>

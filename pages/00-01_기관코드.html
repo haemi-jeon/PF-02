@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기관코드</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../modules/bootstrap-5.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/styles/common.css" />
+</head>
+
+<body>
+  <div id="root">
+
+    <div class="wrapper">
+      <div class="login">
+        <h1 class="brand">
+          <img src="../assets/images/logo.svg" alt="Mostep Admin" />
+        </h1>
+        <div class="form_box">
+          <form>
+            <div>
+              <label for="orgCode" class="visually-hidden">기관코드</label>
+              <input id="orgCode" class="form-control" type="text" placeholder="기관코드를 입력해주세요." value="mostep0123" />
+              <!-- 인증오류 ? .is-invalid 추가 : 제거 -->
+              <p class="invalid-feedback">입력하신 정보와 맞는 기관코드가 없습니다.</p>
+            </div>
+          </form>
+          <div class="btn_area">
+            <button type="submit" class="btn auth_btn" data-bs-toggle="modal"
+              data-bs-target="#orgSuccessModal">인증하기</button> <!-- 활성화 ? .active 추가 : 제거 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal : 기관인증확인 -->
+    <div class="modal fade" id="orgSuccessModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="message_area">
+              <p class="ico success"></p>
+              <p class="text"><span class="text-primary">성남점</span> 기관 인증이 확인되었습니다.</p>
+            </div>
+            <div class="btn_area">
+              <button type="button" class="btn btn-primary">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScripts -->
+  <script src="../modules/jquery-3.5.1.min.js"></script>
+  <script src="../modules/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="../modules/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+  <script src="../modules/bootstrap-datepicker/bootstrap-datepicker.ko.min.js"></script>
+  <script src="../modules/jquery.metisMenu.js"></script>
+  <script src="../modules/jquery.scrollbar.js"></script>
+  <script src="../assets/scripts/common.js"></script>
+</body>
+
+</html>
