@@ -30,5 +30,5 @@
 
 Screenshot
 
-<img src="https://github.com/haemi-jeon/PF-02/issues/1#issue-2534828009" width="600px" />
-<img src="https://github.com/haemi-jeon/PF-02/issues/2#issue-2534828984" width="600px" />
+<img src="https://github.com/user-attachments/assets/b9f87b9d-d143-4261-b106-73195586ad9c" width="600px" />
+<img src="https://github.com/user-attachments/assets/19deff63-f68f-43f2-8a5f-43277b092001" width="600px" />
