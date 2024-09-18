@@ -31,7 +31,9 @@
 Screenshot
 
 - 대시보드
+
   <img src="https://github.com/user-attachments/assets/b9f87b9d-d143-4261-b106-73195586ad9c" width="600px" />
 
 - 사용자 상세
+
   <img src="https://github.com/user-attachments/assets/19deff63-f68f-43f2-8a5f-43277b092001" width="600px" />
